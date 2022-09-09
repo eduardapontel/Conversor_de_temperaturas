@@ -4,7 +4,13 @@ print('{:^35}'.format('CONVERSOR DE TEMPERATURAS'))
 print(bordas)
 print()
 
-c = float(input('Informe a temperatura em °C: '))
+c = ''
+
+while type(c) != float:
+    try:
+        c = float(input('Informe a temperatura em °C: '))
+    except:
+        print('Por favor digite uma temperatura válida!')
 
 print(bordas)
 print('F -> Para converter para Fahrenheit')
